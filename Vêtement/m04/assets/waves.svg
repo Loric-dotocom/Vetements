@@ -1,0 +1,6 @@
+<svg width="480" height="240" viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,40 Q60,10 120,40 T240,40 T360,40 T480,40" fill="none" stroke="#1a1a1a" stroke-width="1" opacity="0.05"/>
+  <path d="M0,90 Q60,60 120,90 T240,90 T360,90 T480,90" fill="none" stroke="#1a1a1a" stroke-width="1" opacity="0.07"/>
+  <path d="M0,140 Q60,110 120,140 T240,140 T360,140 T480,140" fill="none" stroke="#1a1a1a" stroke-width="1" opacity="0.05"/>
+  <path d="M0,190 Q60,160 120,190 T240,190 T360,190 T480,190" fill="none" stroke="#1a1a1a" stroke-width="1" opacity="0.07"/>
+</svg>

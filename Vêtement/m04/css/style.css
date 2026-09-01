@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&display=swap');
+
+/* ---------------------------------------------------------------
+   RELIEF — palette strictement neutre (voir DESIGN.md)
+   Titres : Fraunces (serif éditorial, contrasté) — substitut libre
+   d'Ogg, non disponible sans licence. Texte courant : Inter.
+   ------------------------------------------------------------- */
+
+:root {
+  --noir: #141414;
+  --gris-fonce: #3a3a3a;
+  --gris-moyen: #767676;
+  --gris-clair: #e4e2df;
+  --blanc: #faf9f7;
+
+  --serif: 'Fraunces', 'Times New Roman', serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--blanc);
+  color: var(--gris-fonce);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* --- En-tête / navigation --- */
+
+.site-header {
+  padding: 32px 0;
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  color: var(--noir);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.main-nav a {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gris-moyen);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: var(--noir);
+  border-color: var(--noir);
+}
+
+/* --- Hero --- */
+
+.hero {
+  position: relative;
+  padding: 96px 0 120px;
+  background-image: url('../assets/waves.svg');
+  background-repeat: repeat;
+  background-size: 480px 240px;
+  background-position: center top;
+}
+
+.hero .wrap {
+  max-width: 760px;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  color: var(--noir);
+  letter-spacing: 0.01em;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: var(--gris-moyen);
+  max-width: 480px;
+}
+
+/* --- En-tête de page (collection) --- */
+
+.page-hero {
+  padding: 64px 0 48px;
+  border-bottom: 1px solid var(--gris-clair);
+}
+
+.page-hero h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  color: var(--noir);
+  letter-spacing: 0.01em;
+  margin-bottom: 16px;
+}
+
+.page-hero p {
+  font-size: 1rem;
+  color: var(--gris-moyen);
+  max-width: 480px;
+}
+
+/* --- Section sélection --- */
+
+.selection {
+  padding: 40px 0 120px;
+}
+
+.selection-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 56px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.selection-header h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--noir);
+}
+
+.selection-header .note {
+  font-size: 0.85rem;
+  color: var(--gris-moyen);
+  max-width: 320px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 32px;
+}
+
+.product-card .frame {
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(155deg, var(--gris-clair) 0%, #cfccc7 100%);
+  background-image:
+    url('../assets/waves.svg'),
+    linear-gradient(155deg, var(--gris-clair) 0%, #cfccc7 100%);
+  background-repeat: repeat, no-repeat;
+  background-size: 320px 160px, cover;
+  border: 1px solid #d8d5d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.product-card .frame svg {
+  width: 34%;
+  opacity: 0.35;
+}
+
+.product-card h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--noir);
+  margin-bottom: 6px;
+}
+
+.product-card .material {
+  font-size: 0.82rem;
+  color: var(--gris-moyen);
+}
+
+/* --- Pied de page --- */
+
+.site-footer {
+  border-top: 1px solid var(--gris-clair);
+  padding: 32px 0;
+}
+
+.site-footer .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.site-footer p {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--gris-moyen);
+  text-transform: uppercase;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .main-nav ul {
+    gap: 24px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 64px 0 80px;
+  }
+}
